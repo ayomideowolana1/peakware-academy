@@ -1,0 +1,40 @@
+#faqs {
+    background-color: lightgray;
+  h1 {
+    padding-top: 5vh;
+    // padding-bottom: 10vh;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    color: #022f59;
+  }
+  .container {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    max-width: 1200px;
+    margin: auto;
+    .toggle {
+        &.active{
+            .body{
+                display: block;
+            }
+        }
+
+      .header {
+        font-size: 18px;
+        font-weight: bold;
+        background-color: white;
+        color: #022f59;
+        padding: 10px;
+        border-left: 5px solid #022f59 ;
+        margin-bottom: 20px;
+      }
+      .body{
+        display: none;
+        p{
+            color: #7b7b7b;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+#contact .container {
+  max-width: 1200px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  margin: auto;
+  display: flex;
+}
+#contact .container form {
+  flex: 1;
+}
+#contact .container form #submit {
+  background-color: #fb8639;
+  color: white;
+  width: 30%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+#contact .container form h1 {
+  color: #022f59;
+}
+#contact .container form div {
+  padding: 10px;
+  display: flex;
+  gap: 1vw;
+}
+#contact .container form div input {
+  padding: 10px;
+  flex: 1;
+}
+#contact .container form div textarea {
+  flex: 1;
+}
+#contact .container .contact {
+  flex: 1;
+  padding-left: 10vw;
+}
+#contact .container .contact p {
+  color: #7e7e7e;
+}
+#contact .container .contact p.bold {
+  font-weight: bold;
+}

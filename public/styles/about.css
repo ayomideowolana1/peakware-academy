@@ -1,0 +1,56 @@
+#about .container {
+  max-width: 1200px;
+  margin: auto;
+}
+#about .container section {
+  display: flex;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  gap: 5vh;
+}
+#about .container section > div {
+  flex: 1;
+}
+#about .container section.lower p {
+  font-size: 1rem;
+  text-align: center;
+  padding: 1vw;
+}
+#about .container section.lower .link-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about .container section.lower a {
+  background-color: #fb8639;
+  margin: auto;
+  display: inline-block;
+  padding: 1vw 2vw;
+  color: white;
+  font-weight: 500;
+}
+#about .container section.lower a:hover {
+  color: white;
+}
+#about .container section a {
+  font-weight: bold;
+  color: #04315a;
+  text-decoration: none;
+}
+#about .container section a:hover {
+  color: #fb8639;
+}
+#about .container p {
+  color: #8e8e8e;
+  font-size: 0.9rem;
+  text-align: justify;
+  line-height: 1.5;
+}
+#about .container p a {
+  color: #04315a;
+  font-weight: bold;
+}
+#about .container h1 {
+  color: #04315a;
+  text-align: center;
+}

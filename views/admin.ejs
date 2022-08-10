@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('reusables/head') %>
+  <body>
+    <header class="admin-header">
+      <h2>Admin Panel</h2>
+    </header>
+    <div id="admin">
+      <!-- view  all categories  -->
+      <div class="categories">
+        <h3>Categories</h3>
+        <button id="add-catergory">add new category</button>
+        <form
+          action="/create-category"
+          method="post"
+          id="create-category"
+          class="hide"
+        >
+          <input type="text" name="categoryName" placeholder="category name" />
+          <input type="submit" id="submit" value="create" />
+        </form>
+        <div class="content">
+          <ul>
+            <% for (var i =0; i <= categories.length; i++ ) { %>
+            <li>
+              <%= categories[i] %> 
+            </li>
+             <% } %>
+          </ul>
+        </div>
+      </div>
+      <!-- view  all courses under a category  -->
+      <div class="courses">
+        <h3>Courses</h3>
+        <button id="add-course">add new course</button>
+        <div class="content">
+          <ul>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/js/admin.js"></script>
+  </body>
+</html>
+
+<!-- crud a category  -->
+<!-- crud a course under a category  -->

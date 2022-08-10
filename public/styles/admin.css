@@ -1,0 +1,23 @@
+#admin {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+}
+#admin .show {
+  display: block;
+}
+#admin .hide {
+  display: none;
+}
+#admin .categories {
+  flex: 1;
+}
+#admin .courses {
+  flex: 2;
+}
+.admin-header {
+  max-width: 1400px;
+  margin: auto;
+  background-color: #424242;
+  height: 10vh;
+}

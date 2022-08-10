@@ -1,0 +1,81 @@
+#why-choose-peakware {
+  padding-top: 2vh;
+  display: block;
+}
+#why-choose-peakware .text {
+  padding-bottom: 3vh;
+  background-color: #fff3e8;
+}
+#why-choose-peakware .text h1 {
+  text-align: center;
+  color: #022f59;
+  padding-top: 2vh;
+}
+#why-choose-peakware .text p {
+  max-width: 850px;
+  margin: auto;
+  line-height: 22px;
+  text-align: center;
+  color: #777777;
+  font-size: 15px;
+}
+#why-choose-peakware .text p span {
+  font-weight: bold;
+  color: #022f59;
+}
+#why-choose-peakware .text h3 {
+  text-align: center;
+  color: #777777;
+}
+#why-choose-peakware .text .link-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#why-choose-peakware .text .link-cont a {
+  color: #fb8639;
+  text-decoration: none;
+  border: 2px solid #fb8639;
+  font-size: 13px;
+  font-variant: small-caps;
+  font-weight: bold;
+  padding: 1vh 3vh ;
+  border-radius: 2vw;
+  display: inline-block;
+  margin: auto;
+}
+#why-choose-peakware .image {
+  position: relative;
+  margin-bottom: -5px;
+}
+#why-choose-peakware .image img {
+  max-width: 90vw;
+  margin: 0px;
+}
+#why-choose-peakware .image .info {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 60vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#why-choose-peakware .image .info section {
+  display: flex;
+  gap: 2vw;
+}
+#why-choose-peakware .image .info section img {
+  max-width: 80px;
+}
+#why-choose-peakware .image .info h2 {
+  margin-top: 0px;
+  color: #022f59;
+  margin-bottom: 1vh;
+}
+#why-choose-peakware .image .info p {
+  color: #777777;
+  font-size: 14px;
+  max-width: 600px;
+}
