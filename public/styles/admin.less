@@ -2,18 +2,31 @@
   display: flex;
   max-width: 1200px;
   margin: auto;
+  
   .show {
     display: block;
   }
   .hide {
     display: none;
   }
+
   .categories {
     flex: 1;
   }
   .courses {
     flex: 2;
   }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    input,select{
+      padding: 10px;
+    }
+  }
+
 }
 .admin-header {
   max-width: 1400px;

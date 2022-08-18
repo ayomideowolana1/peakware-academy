@@ -183,15 +183,22 @@ main a {
   padding-bottom: 5vh;
 }
 #courses .grid {
-  border: 1px solid black;
   max-width: 75vw;
   margin: auto;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
 }
 #courses .grid > div {
-  border: 1px solid;
+  border: 1px solid #424242;
   height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#courses .grid > div img {
+  max-width: 50px;
 }
 #courses .link-cont {
   display: flex;
@@ -554,6 +561,16 @@ footer .copyright p span {
 #admin .courses {
   flex: 2;
 }
+#admin form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+#admin form input,
+#admin form select {
+  padding: 10px;
+}
 .admin-header {
   max-width: 1400px;
   margin: auto;
@@ -561,8 +578,8 @@ footer .copyright p span {
   height: 10vh;
 }
 @font-face {
-  font-family: 'Open-sans';
-  src: url('/assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf');
+  font-family: "Open-sans";
+  src: url("/assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
 }
 body {
   margin: 0px;

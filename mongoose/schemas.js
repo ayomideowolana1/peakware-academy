@@ -2,11 +2,15 @@ const mongoose = require("mongoose");
 
 const CategorySchema = new mongoose.Schema({
   title: String,
-  id: String
+  id: String,
 });
 const CourseSchema = new mongoose.Schema({
   title: String,
-  category: String
+  category: String,
+  id: String,
+  description: String,
+  attendees: String,
+  introduction: String
 });
 
 const Course = mongoose.model("Course", CourseSchema);
@@ -19,7 +23,7 @@ const db = async function main() {
         "mongodb+srv://ayomideowolana:iloveNif5.1@school-db.6t9q1.mongodb.net/?retryWrites=true&w=majority",
         {
           useNewUrlParser: true,
-          useUnifiedTopology: true
+          useUnifiedTopology: true,
         }
       )
       .then(() => {

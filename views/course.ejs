@@ -8,14 +8,12 @@
       class="container"
       style="max-width: 1200px; margin: auto; padding: 3vh"
     >
-      <h1><%= category[0].title%></h1>
-      <% for (var i = 0; i < courses.length; i++) { %>
-      <div>
-        <h3><%= courses[i].title %></h3>
-        <p><%= courses[i].description %></p>
-        <a href="/courses/<%= courses[i].id %>">Read more</a>
-      </div>
-      <% } %>
+      <h1><%= course[0].title%></h1>
+      <h4>Brief Introduction</h4>
+      <p><%= course[0].introduction%></p>
+      <h4>Who Should Attend?</h4>
+      <p><%= course[0].attendees%></p>
+      <a href="/egister/<%= course[0].id%>">Register for this course</a>
     </div>
     <%- include('reusables/footer') %>
   </body>

@@ -8,24 +8,15 @@
     oil and gas sector, communication sector, etc. Peakware Academy is one of
     the leading oil and gas training academy in Nigeria
   </p>
-  <!-- <div class="grid">
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-    <div>aaa</div>
-  </div> -->
+  <div class="grid">
+    <% for (var i = 0; i < categories.length; i++ ) { %>
+    <div>
+      <h3> <%= categories[i].title %></h3>
+      <img src="/assets/images/peakware-logo.png" alt="">
+      <a href="/categories/<%= categories[i].id %>">View all courses</a>
+    </div>
+    <% } %>
+  </div>
   <div class="link-cont">
     <a href="">Register now <span>></span></a>
   </div>

@@ -27,15 +27,28 @@ class Event {
 }
 
 const addCourse = () => {
-  alert("add cat");
+  let form = document.querySelector("#create-course");
+  let submit = document.querySelector("#create-course #submit");
+  let content = document.querySelector(".courses .content");
+  form.classList.toggle("hide")
+  content.classList.toggle("hide")
+
+  if(form.classList.contains("hide")){
+    addCourseBtn.innerText = "Add new course"
+  }else{
+    addCourseBtn.innerText = "Cancel"
+  }
+
 };
 const addCat = () => {
   let form = document.querySelector("#create-category");
   let submit = document.querySelector("#create-category #submit");
+
   submit.addEventListener("click", () => {
     form.classList.add("hide");
     form.classList.remove("show");
   });
+
   form.classList.add("show");
   form.classList.remove("hide");
 };

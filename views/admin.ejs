@@ -21,21 +21,66 @@
         </form>
         <div class="content">
           <ul>
-            <% for (var i =0; i <= categories.length; i++ ) { %>
+            <% for (var i =0; i < categories.length; i++ ) { %>
             <li>
-              <%= categories[i] %> 
+              <p><%= categories[i].title %></p>
             </li>
-             <% } %>
+            <% } %>
           </ul>
         </div>
       </div>
       <!-- view  all courses under a category  -->
       <div class="courses">
         <h3>Courses</h3>
-        <button id="add-course">add new course</button>
-        <div class="content">
+        <button id="add-course">Add new course</button>
+        <form
+          action="/create-course"
+          method="post"
+          id="create-course"
+          class="hide"
+        >
+          <input type="text" name="title" placeholder="Title" />
+          <select name="category" id="create">
+            <% for (var i =0; i < categories.length; i++ ) { %>
+            <option value="<%= categories[i].title %>">
+              <%= categories[i].title %>
+            </option>
+            <% } %>
+          </select>
+          <textarea
+            name="introduction"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Introduction"
+          ></textarea>
+          <textarea
+            name="description"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Description"
+          ></textarea>
+          <textarea
+            name="attendees"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Attendees"
+          ></textarea>
+          <input type="submit" value="Create" id="submit" />
+        </form>
+        <div class="content show">
           <ul>
-            
+            <% for (var i =0; i < courses.length; i++ ) { %>
+            <li>
+              <p><%= courses[i].title %></p>
+              <p>
+                <a href="/courses/edit/<%= courses[i].id %>">edit</a>
+                <a href="/courses/delete/<%= courses[i].id %>">delete</a>
+              </p>
+            </li>
+            <% } %>
           </ul>
         </div>
       </div>

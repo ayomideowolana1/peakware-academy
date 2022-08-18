@@ -15,6 +15,16 @@
 #admin .courses {
   flex: 2;
 }
+#admin form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+#admin form input,
+#admin form select {
+  padding: 10px;
+}
 .admin-header {
   max-width: 1400px;
   margin: auto;
