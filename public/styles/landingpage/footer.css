@@ -9,6 +9,12 @@ footer .info {
   display: flex;
   padding: 10vh 0vh;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  footer .info {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
 footer .info section {
   flex: 1;
 }

@@ -26,9 +26,6 @@
   border-left: 5px solid #022f59;
   margin-bottom: 20px;
 }
-#faqs .container .toggle .body {
-  display: none;
-}
 #faqs .container .toggle .body p {
   color: #7b7b7b;
 }

@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const { Route } = require("./helpers");
-const { db, Category, Course } = require("./mongoose/schemas");
+const { db, Category, Course, Faq } = require("./mongoose/schemas");
 const { v4: uuidv4 } = require("uuid");
 
 app.set("view engine", "ejs");
@@ -16,7 +16,6 @@ let navGetObject = [
   new Route("/contact", "contact"),
   new Route("/training-calendar", "training-calendar"),
   new Route("/clients", "clients"),
-  new Route("/faqs", "faqs"),
   new Route("/gallery", "gallery"),
   new Route("/e-learning", "e-learning"),
   new Route("/reister", "register"),
@@ -70,22 +69,22 @@ app.get("/courses/:action/:id", async (req, res) => {
 
 app.get("/categories/:id", async (req, res) => {
   const { id } = req.params;
-  const category = await Category.find({id:id})
-  const courses = await Course.find({category:category[0].title})
+  const category = await Category.find({ id: id });
+  const courses = await Course.find({ category: category[0].title });
 
-  console.log(courses)
+  console.log(courses);
   // console.log(category[0].title)
 
-  res.render("category",{courses:courses,category:category})
+  res.render("category", { courses: courses, category: category });
 });
 
 app.get("/courses/:id", async (req, res) => {
   const { id } = req.params;
-  const course = await Course.find({id:id})
+  const course = await Course.find({ id: id });
 
-  console.log(course)
+  console.log(course);
 
-  res.render("course",{course:course})
+  res.render("course", { course: course });
 });
 
 app.get("/data", async (req, res) => {
@@ -100,6 +99,26 @@ app.get("/admin", async (req, res) => {
   res.render("admin", { categories, courses });
 });
 
+app.get("/admin/faqs", async (req, res) => {
+  res.render("faq-update");
+});
+
+app.post("/create-faq", async (req, res) => {
+  const { question, answer } = req.body;
+
+  const faq = new Faq({ question: question, answer: answer });
+  await faq.save();
+
+  // console.log(question, answer);
+
+  res.redirect("/admin/faqs");
+});
+
+app.get("/faqs", async (req, res) => {
+  const faqs = await Faq.find({});
+  res.render("faqs",{faqs:faqs})
+});
+
 navGetObject.forEach((route) => {
   app.get(route.route, (req, res) => {
     res.render(route.page);
@@ -111,7 +130,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Listening......");
 });
-
-
-
-

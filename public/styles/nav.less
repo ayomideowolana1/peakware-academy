@@ -1,5 +1,7 @@
+@import "mq";
+
 nav {
-  background-color:#022f59;
+  background-color: #022f59;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,18 +9,18 @@ nav {
   min-height: 15vh;
   section {
     box-sizing: border-box;
-      display: none;
-      color: white;
-      width: 1200px;
-      &.upper {
+    display: none;
+    color: white;
+    width: 1200px;
+    &.upper {
       padding: 1vh;
       border-bottom: 1px solid #50667a;
       display: flex;
-      font-size: .8em;
+      font-size: 0.8em;
       display: flex;
       height: 6vh;
       div {
-          display: flex;
+        display: flex;
         align-items: center;
         a {
           text-decoration: none;
@@ -44,19 +46,56 @@ nav {
           // background-color: white;
         }
       }
-      .links{
+      .links {
         // border: 1px solid;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         gap: 3vh;
-        a{
-            text-decoration: none;
-            color: white;
-            font-size: .8em;
-            font-weight: bold;
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 0.8em;
+          font-weight: bold;
         }
       }
     }
   }
+  @media @mobile_portrait {
+    &.sm {
+      display: flex;
+      flex-direction: row;
+      min-height: 10vh;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &.lg {
+      display: none;
+    }
+    .logo {
+      img {
+        max-width: 6vh;
+      }
+    }
+    section {
+      height: auto;
+      flex-direction: column;
+    }
+  }
+  @media @desktop_or_larger {
+    &.sm {
+      display: none;
+    }
+  }
+}
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 10vh;
+  background-color: whitesmoke;
+  height: 90vh;
+  width: 100%;
 }

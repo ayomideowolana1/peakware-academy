@@ -1,3 +1,5 @@
+@import "../mq";
+
 #courses{
     background: #e9e9e9;
     text-align: center;
@@ -13,12 +15,22 @@
         padding-bottom: 5vh;
     }
 
+    @media @mobile_portrait {
+        .grid{
+            grid-template-columns: 1fr;
+        }
+    }
+
     .grid{
         max-width: 75vw;
         margin: auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 10px;
+        @media @mobile_portrait {
+            display: grid;
+            grid-template-columns: 1fr ;
+        }
         &>div{
             border: 1px solid #424242;
             height: 200px;

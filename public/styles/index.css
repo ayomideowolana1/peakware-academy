@@ -55,6 +55,40 @@ nav section.lower .links a {
   font-size: 0.8em;
   font-weight: bold;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  nav.sm {
+    display: flex;
+    flex-direction: row;
+    min-height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  nav.lg {
+    display: none;
+  }
+  nav .logo img {
+    max-width: 6vh;
+  }
+  nav section {
+    height: auto;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1081px)  {
+  nav.sm {
+    display: none;
+  }
+}
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 10vh;
+  background-color: whitesmoke;
+  height: 90vh;
+  width: 100%;
+}
 main {
   height: 82vh;
   display: flex;
@@ -72,12 +106,14 @@ main div {
 main h1 {
   margin: 0px;
   color: white;
+  text-shadow: 0px 0px 3px #424242;
 }
 main p {
   font-size: 1.1em;
   color: white;
   max-width: 600px;
   line-height: 1.5;
+  text-shadow: 0px 0px 3px #424242;
 }
 main a {
   color: white;
@@ -86,9 +122,52 @@ main a {
   padding: 1vw 2vw;
   text-decoration: none;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  main {
+    height: 90vh;
+  }
+  main div {
+    margin-left: 5vw;
+  }
+  main a {
+    padding: 2vw 4vw;
+  }
+}
 #why-choose-peakware {
   margin-top: -3vh;
   display: block;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  #why-choose-peakware .text {
+    padding: 20px;
+  }
+  #why-choose-peakware .image {
+    display: none;
+  }
+  #why-choose-peakware .image-sm .info section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+  #why-choose-peakware .image-sm .info section > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #why-choose-peakware .image-sm .info section > div h2 {
+    text-align: center;
+  }
+  #why-choose-peakware .image-sm .info section img,
+  #why-choose-peakware .image-sm .info section p {
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1081px)  {
+  #why-choose-peakware .image-sm {
+    display: none;
+  }
 }
 #why-choose-peakware .text {
   padding-bottom: 3vh;
@@ -127,7 +206,7 @@ main a {
   font-size: 13px;
   font-variant: small-caps;
   font-weight: bold;
-  padding: 1vh 3vh ;
+  padding: 1vh 3vh;
   border-radius: 2vw;
   display: inline-block;
   margin: auto;
@@ -182,12 +261,23 @@ main a {
   margin: auto;
   padding-bottom: 5vh;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  #courses .grid {
+    grid-template-columns: 1fr;
+  }
+}
 #courses .grid {
   max-width: 75vw;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  #courses .grid {
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
 }
 #courses .grid > div {
   border: 1px solid #424242;
@@ -250,6 +340,11 @@ main a {
   padding-top: 3vh;
   padding-bottom: 3vh;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .testimonials {
+    padding: 20px;
+  }
+}
 .testimonials h1 {
   margin: auto;
   margin-top: 0px;
@@ -309,6 +404,12 @@ footer > div {
 footer .info {
   display: flex;
   padding: 10vh 0vh;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  footer .info {
+    flex-direction: column;
+    padding: 20px;
+  }
 }
 footer .info section {
   flex: 1;
@@ -538,9 +639,6 @@ footer .copyright p span {
   border-left: 5px solid #022f59;
   margin-bottom: 20px;
 }
-#faqs .container .toggle .body {
-  display: none;
-}
 #faqs .container .toggle .body p {
   color: #7b7b7b;
 }
@@ -576,6 +674,20 @@ footer .copyright p span {
   margin: auto;
   background-color: #424242;
   height: 10vh;
+}
+#faq-update .container {
+  max-width: 1200px;
+  margin: auto;
+}
+#faq-update form {
+  max-width: 600px;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+#faq-update form input {
+  padding: 10px;
 }
 @font-face {
   font-family: "Open-sans";

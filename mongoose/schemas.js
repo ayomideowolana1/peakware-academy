@@ -10,11 +10,17 @@ const CourseSchema = new mongoose.Schema({
   id: String,
   description: String,
   attendees: String,
-  introduction: String
+  introduction: String,
+});
+
+const FaqSchema = new mongoose.Schema({
+  question: String,
+  answer: String
 });
 
 const Course = mongoose.model("Course", CourseSchema);
 const Category = mongoose.model("Category", CategorySchema);
+const Faq = mongoose.model("Faq", FaqSchema);
 
 const db = async function main() {
   try {
@@ -34,4 +40,4 @@ const db = async function main() {
   }
 };
 
-module.exports = { db, Course, Category };
+module.exports = { db, Course, Category, Faq };

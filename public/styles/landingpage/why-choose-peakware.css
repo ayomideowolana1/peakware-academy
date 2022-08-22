@@ -1,6 +1,38 @@
 #why-choose-peakware {
-  padding-top: 2vh;
+  margin-top: -3vh;
   display: block;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  #why-choose-peakware .text {
+    padding: 20px;
+  }
+  #why-choose-peakware .image {
+    display: none;
+  }
+  #why-choose-peakware .image-sm .info section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+  #why-choose-peakware .image-sm .info section > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #why-choose-peakware .image-sm .info section > div h2 {
+    text-align: center;
+  }
+  #why-choose-peakware .image-sm .info section img,
+  #why-choose-peakware .image-sm .info section p {
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1081px)  {
+  #why-choose-peakware .image-sm {
+    display: none;
+  }
 }
 #why-choose-peakware .text {
   padding-bottom: 3vh;
@@ -39,7 +71,7 @@
   font-size: 13px;
   font-variant: small-caps;
   font-weight: bold;
-  padding: 1vh 3vh ;
+  padding: 1vh 3vh;
   border-radius: 2vw;
   display: inline-block;
   margin: auto;

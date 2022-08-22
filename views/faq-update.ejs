@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('reusables/head') %>
+  <body id="faq-update">
+    <div class="container">
+
+      <h1>FAQ UPDATE</h1>
+      <button id="new-faq">Add new faq</button>
+      <form action="/create-faq" method="post">
+        <input type="text" name="question" placeholder="Question" id="">
+        <textarea name="answer" id="" cols="30" placeholder="Answer" rows="10"></textarea>
+        <input type="submit" value="create">
+      </form>
+      <div class="content">
+        
+      </div>
+    </div>
+  </body>
+</html>

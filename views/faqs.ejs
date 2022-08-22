@@ -8,38 +8,26 @@
       General Questions
     </h1>
     <div class="container">
+      <% for(var i=0; i < faqs.length; i++){ %>
       <div class="toggle">
-        <div class="header">Who is Peakware Academy?</div>
+        <div class="header"><%= faqs[i].question %></div>
+
         <div class="body">
-          <p>
-            Peakware Academy is an offshoot of Peakware Consulting and one of
-            the most trusted training firm in the region is inception, we have
-            been relied upon by our clients, small and large, private and
-            public, to develop their human capital in a range of management and
-            technical fields, using an ever-expanding portfolio of products and
-            services. Our innovative and diversified training courses and
-            consulting services are designed and delivered by subject matter
-            experts who are competent in providing solutions relevant to this
-            region and applicable to today’s business challenges.
-          </p>
+          <p><%= faqs[i].answer %></p>
         </div>
       </div>
-      <!-- <div class="toggle">
-        <div class="header"></div>
-        <div class="body">
-          <p></p>
-        </div>
-      </div> -->
+
+      <% } %>
     </div>
 
     <%- include('reusables/footer') %>
     <script>
-        let toggles = Array.from(document.querySelectorAll(".toggle"))
-        toggles.forEach(toggle =>{
-            toggle.addEventListener("click",(e)=>{
-                alert("toggled")
-            })
-        })
+      let toggles = Array.from(document.querySelectorAll(".toggle"));
+      toggles.forEach((toggle) => {
+        toggle.addEventListener("click", (e) => {
+          alert("toggled");
+        });
+      });
     </script>
   </body>
 </html>

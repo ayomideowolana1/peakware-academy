@@ -13,12 +13,23 @@
   margin: auto;
   padding-bottom: 5vh;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  #courses .grid {
+    grid-template-columns: 1fr;
+  }
+}
 #courses .grid {
   max-width: 75vw;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  #courses .grid {
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
 }
 #courses .grid > div {
   border: 1px solid #424242;

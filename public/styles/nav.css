@@ -41,8 +41,7 @@ nav section.lower {
 }
 nav section.lower .logo img {
   width: 8vh;
-  height: 8vh;
-  background-color: white;
+  height: auto;
 }
 nav section.lower .links {
   display: flex;
@@ -55,4 +54,38 @@ nav section.lower .links a {
   color: white;
   font-size: 0.8em;
   font-weight: bold;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  nav.sm {
+    display: flex;
+    flex-direction: row;
+    min-height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  nav.lg {
+    display: none;
+  }
+  nav .logo img {
+    max-width: 6vh;
+  }
+  nav section {
+    height: auto;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1081px)  {
+  nav.sm {
+    display: none;
+  }
+}
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 10vh;
+  background-color: whitesmoke;
+  height: 90vh;
+  width: 100%;
 }

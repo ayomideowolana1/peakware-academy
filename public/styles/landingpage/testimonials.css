@@ -2,6 +2,11 @@
   padding-top: 3vh;
   padding-bottom: 3vh;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)  {
+  .testimonials {
+    padding: 20px;
+  }
+}
 .testimonials h1 {
   margin: auto;
   margin-top: 0px;
@@ -21,9 +26,7 @@
 }
 .testimonials .logo-cont .logo {
   width: 100px;
-  height: 100px;
-  background-color: aliceblue;
-  border: 1px solid;
+  height: auto;
   margin: auto;
   margin-top: 2vh;
   margin-bottom: 2vh;
