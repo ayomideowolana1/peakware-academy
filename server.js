@@ -119,6 +119,15 @@ app.get("/faqs", async (req, res) => {
   res.render("faqs",{faqs:faqs})
 });
 
+app.get("/register/:id",async(req,res)=>{
+  const { id } = req.params;
+  const course = await Course.find({ id: id });
+
+  console.log(course);
+
+  res.render("register",{ course: course });
+})
+
 navGetObject.forEach((route) => {
   app.get(route.route, (req, res) => {
     res.render(route.page);

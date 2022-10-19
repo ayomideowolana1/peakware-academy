@@ -705,3 +705,20 @@ body {
   padding: 2vh;
   width: 100%;
 }
+.register-cont {
+  background-color: #f2f2f2;
+}
+.register-cont form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.register-cont form h1 {
+  text-align: center;
+}
+.register-cont form input {
+  padding: 15px;
+}
